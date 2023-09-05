@@ -85,17 +85,17 @@ class User {
                 </section>
                 <section class="icons-card">
                     <div class="whats-icon">
-                        <a href="">
+                        <a href="https://wa.me/55${user.phone}">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                     <div class="insta-icon">
-                        <a href="">
+                        <a href="https://www.instagram.com/${user.insta}/">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                     </div>
                     <div class="git-icon">
-                        <a href="">
+                        <a href="https://github.com/${user.git}">
                             <i class="fa-brands fa-github"></i>
                         </a>
                     </div>
