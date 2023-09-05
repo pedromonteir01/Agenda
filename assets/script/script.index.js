@@ -66,7 +66,15 @@ class ListUser {
     }
 
     addUser(user) {
-        this.list.push(user);
+        if(isAnyInputEmpty()) {
+            envieMsg("preencha todos os campos", "error");
+        } else if (!isURLValida()) {
+            envieMsg("coloque um link válido", "success");
+        } else {
+            this.list.push(user);
+            clearInputs();
+            renderCard();
+        }
     }
 }
 
