@@ -5,8 +5,8 @@ class User {
         this.phone = phone;
         this.photo = photo;
         this.birthdate = birthdate;
-        this.age = getAge(birthdate);
-        this.sign = getSign(birthdate);
+        this.age = this.getAge(this.birthdate);
+        this.sign = this.getSign(this.birthdate);
         this.email = email;
         this.cep = cep;
         this.city = city;
@@ -68,7 +68,7 @@ class ListUser {
     addUser(user) {
         if(isAnyInputEmpty()) {
             envieMsg("preencha todos os campos", "error");
-        } else if (!isURLValida()) {
+        } else if (!isURLValida(user.photo)) {
             envieMsg("coloque um link válido", "success");
         } else {
             this.list.push(user);
