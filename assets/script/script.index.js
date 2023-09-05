@@ -169,7 +169,7 @@ function formatedCEP(value) {
 }
 
 function renderCard() {
-    let listHTML = document.getElementById("cards").value;
+    let listHTML = document.getElementById("cards");
     let text = "";
 
     userList.list.forEach(user => {
