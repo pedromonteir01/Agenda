@@ -1,26 +1,50 @@
 <mxfile host="65bd71144e">
     <diagram id="_iOPbtojSU_5HbLdEPTw" name="Page-1">
-        <mxGraphModel dx="1054" dy="776" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="958" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="7" value="" style="group" vertex="1" connectable="0" parent="1">
-                    <mxGeometry x="190" y="260" width="240" height="370" as="geometry"/>
+                    <mxGeometry x="60" y="90" width="240" height="480" as="geometry"/>
                 </mxCell>
                 <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7">
-                    <mxGeometry width="240" height="370" as="geometry"/>
+                    <mxGeometry width="240" height="469.78723404255317" as="geometry"/>
                 </mxCell>
                 <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7">
-                    <mxGeometry y="50" width="240" height="220" as="geometry"/>
+                    <mxGeometry y="63.48255319148935" width="240" height="253.1131914893617" as="geometry"/>
                 </mxCell>
                 <mxCell id="4" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;USER&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="7">
-                    <mxGeometry x="90" y="10" width="60" height="30" as="geometry"/>
+                    <mxGeometry x="90" y="12.696952271420354" width="60" height="38.090856814261066" as="geometry"/>
                 </mxCell>
                 <mxCell id="6" value="- Name: String&lt;br&gt;- Telephone: Number&lt;br&gt;- Phone: Number&lt;br&gt;- Photo: String&lt;br&gt;- Birthdate: Date&lt;br&gt;- Emai: String&lt;br&gt;- Cep: Number&lt;br&gt;-City: String&lt;br&gt;-Insta String&lt;br&gt;-Github: String" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" vertex="1" parent="7">
-                    <mxGeometry y="50" width="240" height="220" as="geometry"/>
+                    <mxGeometry y="63.48255319148935" width="240" height="242.9004255319149" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="+ GetAge(): Number&lt;br&gt;+GetSign(): String&lt;br&gt;+Render() : void" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" vertex="1" parent="7">
-                    <mxGeometry y="270" width="240" height="100" as="geometry"/>
+                <mxCell id="8" value="+getAge(): Number&lt;br&gt;+getSign(): String&lt;br&gt;+deleteUser: void&lt;br&gt;+editUser: void" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" vertex="1" parent="7">
+                    <mxGeometry y="320" width="240" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="480" y="230" width="370" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;+addUser(user) : void&lt;br&gt;+&lt;span style=&quot;font-family: &amp;quot;Fira Code&amp;quot;, Consolas, &amp;quot;Courier New&amp;quot;, monospace;&quot;&gt;getPersonPeloIdQueEuPassar&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Fira Code&amp;quot;, Consolas, &amp;quot;Courier New&amp;quot;, monospace;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Fira Code&amp;quot;, Consolas, &amp;quot;Courier New&amp;quot;, monospace;&quot;&gt;id&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Fira Code&amp;quot;, Consolas, &amp;quot;Courier New&amp;quot;, monospace;&quot;&gt;) : Object&lt;/span&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="11">
+                    <mxGeometry width="370.00000000000006" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="11">
+                    <mxGeometry y="31.08108108108108" width="370.00000000000006" height="24.864864864864863" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;LIST USER&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="11">
+                    <mxGeometry x="77.08333333333336" y="6.216216216216216" width="215.83333333333337" height="18.64864864864865" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="- List: String[]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" vertex="1" parent="11">
+                    <mxGeometry y="31.08108108108108" width="370.00000000000006" height="24.864864864864863" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=none;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=18;fontColor=#F0F0F0;endArrow=diamondThin;endFill=0;" edge="1" parent="1" source="18" target="12">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="(1, *)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#F0F0F0;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="315" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="(1)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#F0F0F0;" vertex="1" parent="1">
+                    <mxGeometry x="425" y="315" width="60" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

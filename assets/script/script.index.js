@@ -60,49 +60,13 @@ class User {
         }
     }
 
-    getCard() {
-        let bigCard = document.getElementById("big-card");
-        let text = "";
-        userList.list.forEach(user => {
-            text = `
-                <h1>Details</h1>
-                <section class="content-bigcard">
-                    <img src=${user.photo} alt="${user.name}-photo">
-                    <b><p>${user.name}</p></b>
-                    <p>Id:${user.id}</p>
-                </section>
-                <section class="other-informations">
-                    <p><b>Phone:</b> ${formatedCellphone(user.phone)}</p>
-                    <p><b>Telehone:</b> ${formatedCellphone(user.phone)}</p>
-                    <p><b>Birthdate:</b> ${dateinPTBR(user.birthdate)}</p>
-                    <p><b>Age:</b> ${user.age}</p>
-                    <p><b>Sign:</b> ${user.sign}</p>
-                    <p><b>Email:</b> ${user.email}</p>
-                    <p><b>CEP:</b> ${formatedCEP(user.cep)}</p>
-                    <p><b>City:</b> ${user.city}</p>
-                    <p><b>Instagram:</b> ${user.insta}</p>
-                    <p><b>GitHub:</b> ${user.git}</p>
-                </section>
-                <section class="icons-card">
-                    <div class="whats-icon">
-                        <a href="https://wa.me/55${user.phone}">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                    </div>
-                    <div class="insta-icon">
-                        <a href="https://www.instagram.com/${user.insta}/">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-                    <div class="git-icon">
-                        <a href="https://github.com/${user.git}">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                    </div>
-                </section>
-            `
-        })
-        bigCard.innerHTML = text;
+
+    deletUSer() {
+
+    }
+
+    editUser() {
+
     }
 }
 
@@ -122,6 +86,12 @@ class ListUser {
             renderCard();
         }
     }
+
+    getPersonPeloIdQueEuPassar(id){
+        return this.list.find(user => user.id === id)
+        // return é um objeto do tipo pessoa singular.
+    }
+
 }
 
 const userList = new ListUser();
@@ -220,16 +190,62 @@ function renderCard() {
 
     userList.list.forEach(user => {
         text += `
-            <section class="card">
+            <div class="cardTop" onclick="renderContact(${user.id})">
                 <img src="${user.photo} alt="${user.name}-photo">
                 <div class="content-card">
                     <b><p>${user.name}</p></b>
                     <p>Telephone: ${formatedCellphone(user.telephone)}</p>
                     <p>Phone: ${formatedCellphone(user.phone)}</p>
                 </div>
-            </section>
+            </div>
         `
     })
 
     listHTML.innerHTML = text;
+}
+
+
+function renderContact(id){
+    const user = userList.getPersonPeloIdQueEuPassar(id);
+    let bigCard = document.getElementById("big-card");
+        let text = "";
+       
+            text = `
+                <h1>Details</h1>
+                <section class="content-bigcard">
+                    <img src=${user.photo} alt="${user.name}-photo">
+                    <b><p>${user.name}</p></b>
+                    <p>Id:${user.id}</p>
+                </section>
+                <section class="other-informations">
+                    <p><b>Phone:</b> ${formatedCellphone(user.phone)}</p>
+                    <p><b>Telehone:</b> ${formatedCellphone(user.phone)}</p>
+                    <p><b>Birthdate:</b> ${dateinPTBR(user.birthdate)}</p>
+                    <p><b>Age:</b> ${user.age}</p>
+                    <p><b>Sign:</b> ${user.sign}</p>
+                    <p><b>Email:</b> ${user.email}</p>
+                    <p><b>CEP:</b> ${formatedCEP(user.cep)}</p>
+                    <p><b>City:</b> ${user.city}</p>
+                    <p><b>Instagram:</b> ${user.insta}</p>
+                    <p><b>GitHub:</b> ${user.git}</p>
+                </section>
+                <section class="icons-card">
+                    <div class="whats-icon">
+                        <a href="https://wa.me/55${user.phone}">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    <div class="insta-icon">
+                        <a href="https://www.instagram.com/${user.insta}/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="git-icon">
+                        <a href="https://github.com/${user.git}">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </section>
+            `
+        bigCard.innerHTML = text;
 }
