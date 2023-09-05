@@ -14,9 +14,9 @@ class User {
         this.git = git;
     }
 
-    getAge() {
+    getAge(birth) {
         let today = new Date();
-        let birthdate = new Date(this.birthdate);
+        let birthdate = new Date(birth);
         let age = today.getFullYear() - birthdate.getFullYear();
         let month = today.getMonth() - birthdate.getMonth();
 
@@ -26,8 +26,8 @@ class User {
         return age;
     }
 
-    getSign() {
-        let birthdate = new Date(this.birthdate);
+    getSign(birth) {
+        let birthdate = new Date(birth);
         let day = birthdate.getDate();
         let month = birthdate.getMonth() + 1;
         console.log("Passou pelo getSigno() da class User");
@@ -136,7 +136,6 @@ function clearInputs() {
 }
 
 function formatedCellphone(cellphone) {
-    console.log("Passou pela funcao formatedCellphone()");
 
     let cellphoneArray = cellphone.split("");
     let cellphoneFormated = "(" + cellphoneArray[0] + cellphoneArray[1] + ")"
@@ -148,9 +147,16 @@ function formatedCellphone(cellphone) {
 }
 
 function dateinPTBR(date) {
-    console.log("Passou pela funcao dateinPTBR()");
 
     let dateArray = date.split("-");
     let datePTBR = dateArray[2] + "/" + dateArray[1] + "/" + dateArray[0];
     return datePTBR;
 }
+
+function formatedCEP(value) {
+    let cep = String(value).split("");
+    let formated_cep = cep[0] + cep[1] + cep[2] + cep[3] + cep[4] + "-" + cep[5] + cep[6] + cep[7];
+
+    return formated_cep;
+}
+
