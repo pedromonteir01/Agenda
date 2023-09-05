@@ -160,3 +160,22 @@ function formatedCEP(value) {
     return formated_cep;
 }
 
+function renderCard() {
+    let listHTML = document.getElementById("cards").value;
+    let text = "";
+
+    userList.list.forEach(user => {
+        text += `
+            <section class="card">
+                <img src="${user.photo} alt="${user.name}-photo">
+                <div class="content-card">
+                    <b><p>${user.name}</p></b>
+                    <p>Telephone: ${formatedCellphone(user.telephone)}</p>
+                    <p>Phone: ${formatedCellphone(user.phone)}</p>
+                </div>
+            </section>
+        `
+    })
+
+    listHTML.innerHTML = text;
+}
