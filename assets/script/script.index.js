@@ -12,6 +12,7 @@ class User {
         this.city = city;
         this.insta = insta;
         this.git = git;
+        this.id = Math.floor(Math.random() * 9999);
     }
 
     getAge(birth) {
@@ -57,6 +58,51 @@ class User {
         } else if ((month == 11 && day >= 23) || (month == 12 && day <= 21)) {
             return "Sagitário ♐";
         }
+    }
+
+    getCard() {
+        let bigCard = document.getElementById("big-card");
+        let text = "";
+        userList.list.forEach(user => {
+            text = `
+                <h1>Details</h1>
+                <section class="content-bigcard">
+                    <img src=${user.photo} alt="${user.name}-photo">
+                    <b><p>${user.name}</p></b>
+                    <p>Id:${user.id}</p>
+                </section>
+                <section class="other-informations">
+                    <p><b>Phone:</b> ${formatedCellphone(user.phone)}</p>
+                    <p><b>Telehone:</b> ${formatedCellphone(user.phone)}</p>
+                    <p><b>Birthdate:</b> ${dateinPTBR(user.birthdate)}</p>
+                    <p><b>Age:</b> ${user.age}</p>
+                    <p><b>Sign:</b> ${user.sign}</p>
+                    <p><b>Email:</b> ${user.email}</p>
+                    <p><b>CEP:</b> ${formatedCEP(user.cep)}</p>
+                    <p><b>City:</b> ${user.city}</p>
+                    <p><b>Instagram:</b> ${user.insta}</p>
+                    <p><b>GitHub:</b> ${user.git}</p>
+                </section>
+                <section class="icons-card">
+                    <div class="whats-icon">
+                        <a href="">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    <div class="insta-icon">
+                        <a href="">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="git-icon">
+                        <a href="">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </section>
+            `
+        })
+        bigCard.innerHTML = text;
     }
 }
 
